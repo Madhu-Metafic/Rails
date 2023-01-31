@@ -47,3 +47,403 @@ Processing by AuthorsController#create as */*
 Completed 200 OK in 131ms (Views: 3.5ms | ActiveRecord: 115.7ms | Allocations: 2593)
 
 
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20230131071300)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (24.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "username" varchar, "email" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230131071300"]]
+  [1m[36mTRANSACTION (109.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/users" for ::1 at 2023-01-31 13:14:42 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+NameError (uninitialized constant ApplicationController::JsonWebToken
+
+    include JsonWebToken
+            ^^^^^^^^^^^^):
+  
+app/controllers/application_controller.rb:2:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/users_controller.rb:1:in `<main>'
+Started POST "/users" for ::1 at 2023-01-31 13:17:15 +0530
+  
+NameError (uninitialized constant ApplicationController::JsonWebToken
+
+    include JsonWebToken
+            ^^^^^^^^^^^^):
+  
+app/controllers/application_controller.rb:2:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/users_controller.rb:1:in `<main>'
+Started POST "/users" for ::1 at 2023-01-31 13:17:37 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"\"name\n\""=>"madhu", "user_name"=>"madhu", "email"=>"madhu@gmail.com", "password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 175ms (ActiveRecord: 0.0ms | Allocations: 2541)
+
+
+  
+SyntaxError (C:/Users/madhu/Downloads/Rails Practice/my_app/app/models/user.rb:4: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+...validates :username, presence :true, uniqueness: true
+...                              ^
+):
+  
+app/models/user.rb:4: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+app/models/user.rb:4: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+app/controllers/users_controller.rb:15:in `create'
+Started POST "/users" for ::1 at 2023-01-31 13:19:35 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"\"name\n\""=>"madhu", "user_name"=>"madhu", "email"=>"madhu@gmail.com", "password"=>"[FILTERED]"}
+[31mUnpermitted parameters: :"name
+", :email. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x000001e9364f3d48>, params: {"\"name\n\""=>"madhu", "user_name"=>"madhu", "email"=>"madhu@gmail.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"create"} }[0m
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 1.0ms | Allocations: 8781)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'user_name' for User.
+
+          raise UnknownAttributeError.new(self, k.to_s)
+          ^^^^^):
+  
+app/controllers/users_controller.rb:15:in `create'
+Started POST "/users" for ::1 at 2023-01-31 13:21:21 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"\"name\n\""=>"madhu", "user_name"=>"madhu", "email"=>"madhu@gmail.com", "password"=>"[FILTERED]"}
+[31mUnpermitted parameter: :"name
+". Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x000001dd7aca46e0>, params: {"\"name\n\""=>"madhu", "user_name"=>"madhu", "email"=>"madhu@gmail.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"create"} }[0m
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.9ms | Allocations: 8737)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'user_name' for User.
+
+          raise UnknownAttributeError.new(self, k.to_s)
+          ^^^^^):
+  
+app/controllers/users_controller.rb:15:in `create'
+Started POST "/users" for ::1 at 2023-01-31 13:22:48 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"\"name\n\""=>"madhu", "user_name"=>"madhu", "email"=>"madhu@gmail.com", "password"=>"[FILTERED]"}
+[31mUnpermitted parameters: :"name
+", :user_name. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x0000019efad679b0>, params: {"\"name\n\""=>"madhu", "user_name"=>"madhu", "email"=>"madhu@gmail.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"create"} }[0m
+Completed 500 Internal Server Error in 360ms (ActiveRecord: 1.2ms | Allocations: 12844)
+
+
+  
+NoMethodError (undefined method `password_digest=' for #<User id: nil, name: nil, username: nil, email: "madhu@gmail.com", created_at: nil, updated_at: nil>
+Did you mean?  password=):
+  
+app/controllers/users_controller.rb:15:in `create'
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/users" for ::1 at 2023-01-31 13:31:29 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"\"name\n\""=>"madhu", "user_name"=>"madhu", "email"=>"madhu@gmail.com", "password"=>"[FILTERED]"}
+[31mUnpermitted parameters: :"name
+", :user_name. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x000002cd54246fc0>, params: {"\"name\n\""=>"madhu", "user_name"=>"madhu", "email"=>"madhu@gmail.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"create"} }[0m
+Completed 500 Internal Server Error in 330ms (ActiveRecord: 2.6ms | Allocations: 12843)
+
+
+  
+NoMethodError (undefined method `password_digest=' for #<User id: nil, name: nil, username: nil, email: "madhu@gmail.com", created_at: nil, updated_at: nil>
+Did you mean?  password=):
+  
+app/controllers/users_controller.rb:15:in `create'
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/users" for ::1 at 2023-01-31 13:34:43 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"\"name\n\""=>"madhu", "user_name"=>"madhu", "email"=>"madhu@gmail.com", "password"=>"[FILTERED]"}
+[31mUnpermitted parameters: :"name
+", :user_name. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x0000021612bac0f0>, params: {"\"name\n\""=>"madhu", "user_name"=>"madhu", "email"=>"madhu@gmail.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"create"} }[0m
+Completed 500 Internal Server Error in 346ms (ActiveRecord: 1.8ms | Allocations: 12843)
+
+
+  
+NoMethodError (undefined method `password_digest=' for #<User id: nil, name: nil, username: nil, email: "madhu@gmail.com", created_at: nil, updated_at: nil>
+Did you mean?  password=):
+  
+app/controllers/users_controller.rb:15:in `create'
+Started POST "/users" for ::1 at 2023-01-31 13:39:33 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"\"name\n\""=>"madhu", "user_name"=>"madhu", "email"=>"madhu@gmail.com", "password"=>"[FILTERED]"}
+[31mUnpermitted parameters: :"name
+", :user_name, :password. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00000263a1d61cd8>, params: {"\"name\n\""=>"madhu", "user_name"=>"madhu", "email"=>"madhu@gmail.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"create"} }[0m
+Completed 500 Internal Server Error in 60ms (ActiveRecord: 1.7ms | Allocations: 13097)
+
+
+  
+NoMethodError (undefined method `password_digest' for #<User id: nil, name: nil, username: nil, email: "madhu@gmail.com", created_at: nil, updated_at: nil>
+Did you mean?  password):
+  
+app/controllers/users_controller.rb:16:in `create'
+Started POST "/users" for ::1 at 2023-01-31 13:42:45 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"\"name\n\""=>"madhu", "user_name"=>"madhu", "email"=>"madhu@gmail.com", "password"=>"[FILTERED]"}
+[31mUnpermitted parameters: :"name
+", :user_name. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x000002e0bc54f700>, params: {"\"name\n\""=>"madhu", "user_name"=>"madhu", "email"=>"madhu@gmail.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"create"} }[0m
+Completed 500 Internal Server Error in 346ms (ActiveRecord: 1.6ms | Allocations: 12851)
+
+
+  
+NoMethodError (undefined method `password_digest=' for #<User id: nil, name: nil, username: nil, email: "madhu@gmail.com", created_at: nil, updated_at: nil>
+Did you mean?  password=):
+  
+app/controllers/users_controller.rb:15:in `create'
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/users" for ::1 at 2023-01-31 13:44:15 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"\"name\n\""=>"madhu", "user_name"=>"madhu", "email"=>"madhu@gmail.com", "password"=>"[FILTERED]"}
+[31mUnpermitted parameters: :"name
+", :user_name. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x0000023f89b18f58>, params: {"\"name\n\""=>"madhu", "user_name"=>"madhu", "email"=>"madhu@gmail.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"create"} }[0m
+Completed 500 Internal Server Error in 416ms (ActiveRecord: 1.5ms | Allocations: 12852)
+
+
+  
+NoMethodError (undefined method `password_digest=' for #<User id: nil, name: nil, username: nil, email: "madhu@gmail.com", created_at: nil, updated_at: nil>
+Did you mean?  password=):
+  
+app/controllers/users_controller.rb:15:in `create'
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/users" for ::1 at 2023-01-31 13:51:55 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"\"name\n\""=>"madhu", "user_name"=>"madhu", "email"=>"madhu@gmail.com", "password"=>"[FILTERED]"}
+[31mUnpermitted parameters: :"name
+", :user_name. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x0000024c36c68a48>, params: {"\"name\n\""=>"madhu", "user_name"=>"madhu", "email"=>"madhu@gmail.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"create"} }[0m
+Completed 500 Internal Server Error in 393ms (ActiveRecord: 1.3ms | Allocations: 12850)
+
+
+  
+NoMethodError (undefined method `password_digest=' for #<User id: nil, name: nil, username: nil, email: "madhu@gmail.com", created_at: nil, updated_at: nil>
+Did you mean?  password=):
+  
+app/controllers/users_controller.rb:15:in `create'
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/users" for ::1 at 2023-01-31 15:17:14 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"\"name\n\""=>"madhu", "user_name"=>"madhu", "email"=>"madhu@gmail.com", "password"=>"[FILTERED]"}
+[31mUnpermitted parameters: :"name
+", :user_name. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x000001e1e401c620>, params: {"\"name\n\""=>"madhu", "user_name"=>"madhu", "email"=>"madhu@gmail.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"create"} }[0m
+Completed 500 Internal Server Error in 329ms (ActiveRecord: 1.2ms | Allocations: 12846)
+
+
+  
+NoMethodError (undefined method `password_digest=' for #<User id: nil, name: nil, username: nil, email: "madhu@gmail.com", created_at: nil, updated_at: nil>
+Did you mean?  password=):
+  
+app/controllers/users_controller.rb:15:in `create'
+Started POST "/users" for ::1 at 2023-01-31 15:22:46 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"\"name\n\""=>"madhu", "user_name"=>"madhu", "email"=>"madhu@gmail.com", "password"=>"[FILTERED]"}
+[31mUnpermitted parameters: :"name
+", :user_name. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x000002a8313dfb90>, params: {"\"name\n\""=>"madhu", "user_name"=>"madhu", "email"=>"madhu@gmail.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"create"} }[0m
+Completed 500 Internal Server Error in 374ms (ActiveRecord: 1.3ms | Allocations: 12846)
+
+
+  
+NoMethodError (undefined method `password_digest=' for #<User id: nil, name: nil, username: nil, email: "madhu@gmail.com", created_at: nil, updated_at: nil>
+Did you mean?  password=):
+  
+app/controllers/users_controller.rb:15:in `create'
+Started POST "/users" for ::1 at 2023-01-31 15:23:56 +0530
+Processing by UsersController#create as */*
+  Parameters: {"\"name\n\""=>"madhu", "username"=>"madhu", "email"=>"madhu@gmail.com", "password"=>"[FILTERED]"}
+[31mUnpermitted parameter: :"name
+". Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x000002a831a38eb0>, params: {"\"name\n\""=>"madhu", "username"=>"madhu", "email"=>"madhu@gmail.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"create"} }[0m
+Completed 500 Internal Server Error in 417ms (ActiveRecord: 0.0ms | Allocations: 4585)
+
+
+  
+NoMethodError (undefined method `password_digest=' for #<User id: nil, name: nil, username: "madhu", email: "madhu@gmail.com", created_at: nil, updated_at: nil>
+Did you mean?  password=):
+  
+app/controllers/users_controller.rb:15:in `create'
+Started POST "/users" for ::1 at 2023-01-31 15:24:25 +0530
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"madhu", "email"=>"madhu@gmail.com", "password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 412ms (ActiveRecord: 0.0ms | Allocations: 4474)
+
+
+  
+NoMethodError (undefined method `password_digest=' for #<User id: nil, name: nil, username: "madhu", email: "madhu@gmail.com", created_at: nil, updated_at: nil>
+Did you mean?  password=):
+  
+app/controllers/users_controller.rb:15:in `create'
+Started POST "/users" for ::1 at 2023-01-31 15:25:43 +0530
+Processing by UsersController#create as */*
+  Parameters: {"\"name\n\""=>"madhu", "username"=>"madhu", "email"=>"madhu@gmail.com", "password"=>"[FILTERED]"}
+[31mUnpermitted parameter: :"name
+". Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x000002a82f7aa498>, params: {"\"name\n\""=>"madhu", "username"=>"madhu", "email"=>"madhu@gmail.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"create"} }[0m
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 1.6ms | Allocations: 3767)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'password' for User.
+
+          raise UnknownAttributeError.new(self, k.to_s)
+          ^^^^^):
+  
+app/controllers/users_controller.rb:15:in `create'
+Started POST "/users" for ::1 at 2023-01-31 15:26:07 +0530
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"madhu", "email"=>"madhu@gmail.com", "password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 575)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'password' for User.
+
+          raise UnknownAttributeError.new(self, k.to_s)
+          ^^^^^):
+  
+app/controllers/users_controller.rb:15:in `create'
+Started POST "/users" for ::1 at 2023-01-31 15:26:57 +0530
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"madhu", "email"=>"madhu@gmail.com", "password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 308ms (ActiveRecord: 1.7ms | Allocations: 7657)
+
+
+  
+NoMethodError (undefined method `password_digest=' for #<User id: nil, name: nil, username: "madhu", email: "madhu@gmail.com", created_at: nil, updated_at: nil>
+Did you mean?  password=):
+  
+app/controllers/users_controller.rb:15:in `create'
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20230131100108)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "user_name" varchar, "email" varchar, "password_digest" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20230131100108)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "user_name" varchar, "email" varchar, "password_digest" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+Started POST "/users" for ::1 at 2023-01-31 15:35:10 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCACHE ActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20230131100108_create_users.rb
+
+
+):
+  
+activerecord (7.0.4.2) lib/active_record/migration.rb:627:in `check_pending!'
+activerecord (7.0.4.2) lib/active_record/migration.rb:592:in `block (2 levels) in call'
+activesupport (7.0.4.2) lib/active_support/file_update_checker.rb:83:in `execute'
+activerecord (7.0.4.2) lib/active_record/migration.rb:597:in `block in call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4.2) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20230131100108)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "user_name" varchar, "email" varchar, "password_digest" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (213.9ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20230131100108)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (36.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "user_name" varchar, "email" varchar, "password_digest" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230131100108"]]
+  [1m[36mTRANSACTION (201.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/users" for ::1 at 2023-01-31 15:39:44 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"user_name"=>"madhu", "email"=>"madhu@gmail.com", "password"=>"[FILTERED]"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."user_name" = ? LIMIT ?[0m  [["user_name", "madhu"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Create (2.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "user_name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", nil], ["user_name", "madhu"], ["email", "madhu@gmail.com"], ["password_digest", "[FILTERED]"], ["created_at", "2023-01-31 10:09:45.798802"], ["updated_at", "2023-01-31 10:09:45.798802"]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (100.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+Completed 201 Created in 661ms (Views: 3.1ms | ActiveRecord: 104.3ms | Allocations: 13065)
+
+
+Started POST "/login" for ::1 at 2023-01-31 15:42:26 +0530
+  
+ActionController::RoutingError (No route matches [POST] "/login"):
+  
+Started POST "/auth/login" for ::1 at 2023-01-31 15:42:56 +0530
+  
+SyntaxError (C:/Users/madhu/Downloads/Rails Practice/my_app/app/controllers/authentication_controller.rb:2: syntax error, unexpected ':', expecting `end'
+    skip_before_action: authenticate_request
+                      ^
+):
+  
+app/controllers/authentication_controller.rb:2: syntax error, unexpected ':', expecting `end'
+app/controllers/authentication_controller.rb:2: syntax error, unexpected ':', expecting `end'
+Started POST "/auth/login" for ::1 at 2023-01-31 15:45:04 +0530
+Processing by AuthenticationController#login as */*
+  Parameters: {"email"=>"madhu@gmail.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "madhu@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 326ms (Views: 0.3ms | ActiveRecord: 2.2ms | Allocations: 4800)
+
+
